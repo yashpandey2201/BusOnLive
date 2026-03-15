@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Driver Panel</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="driver-container">
+
+<h1>🚍 Driver Login Panel</h1>
+
+<label>Select Bus</label>
+<br>
+
+<select id="busId">
+<option value="Bus1">Bus 1</option>
+<option value="Bus2">Bus 2</option>
+<option value="Bus3">Bus 3</option>
+</select>
+
+<br><br>
+
+<input type="text" id="driverId" placeholder="Driver ID">
+<br><br>
+
+<input type="password" id="password" placeholder="Password">
+<br><br>
+
+<button onclick="login()">Login</button>
+
+<br><br>
+
+<button onclick="startTracking()" id="startBtn" disabled>
+Start Sharing Location
+</button>
+
+<button onclick="stopTracking()">
+Stop Tracking
+</button>
+
+<p>Status : <span id="status">Locked</span></p>
+
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
